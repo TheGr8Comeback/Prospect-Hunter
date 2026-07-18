@@ -1,0 +1,17 @@
+node_modules/
+.next/
+.env
+.env.local
+.env.*.local
+.DS_Store
+*.log
+dist/
+.vercel/
+
+# Scraped data & generated outreach — keep out of git (contains business emails)
+*.csv
+outreach-plan.pdf
+scraper/pitch-batches/
+scraper/intent-seen.json
+outreach/
+.claude/worktrees/

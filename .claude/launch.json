@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "nextjs",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--", "-p", "3003"],
+      "port": 3003,
+      "autoPort": false,
+      "cwd": "app"
+    },
+    {
+      "name": "resort-template",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4599", "--directory", "templates/resort"],
+      "port": 4599
+    }
+  ]
+}

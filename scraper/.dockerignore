@@ -1,0 +1,6 @@
+node_modules
+.git
+*.csv
+*.log
+pitch-batches
+intent-seen.json

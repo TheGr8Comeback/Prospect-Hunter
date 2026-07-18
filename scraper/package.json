@@ -1,0 +1,27 @@
+{
+  "name": "prospect-os-scraper",
+  "version": "1.0.0",
+  "description": "Prospect OS worker — scraping + enrichissement",
+  "main": "worker.js",
+  "scripts": {
+    "start": "node worker.js",
+    "dev": "node --watch worker.js",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.x",
+    "cheerio": "^1.2.0",
+    "dotenv": "^16.x",
+    "imapflow": "^1.3.5",
+    "nodemailer": "^8.0.7",
+    "pg": "^8.20.0",
+    "playwright": "^1.59.1",
+    "playwright-extra": "^4.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "ws": "^8.20.0"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.5"
+  }
+}

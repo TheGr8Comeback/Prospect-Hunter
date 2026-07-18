@@ -1,0 +1,26 @@
+# Prospect Hunter — full stack in one command:  docker compose up --build
+#
+#   app     → Next.js dashboard on http://localhost:3000
+#   worker  → Node scraper (Playwright bundled), watches the jobs table
+#
+# Both read your credentials from the root .env file (copy .env.example).
+# The database schema is applied once by pasting schema.sql into Supabase.
+
+services:
+  app:
+    build:
+      context: ./app
+      args:
+        # NEXT_PUBLIC_* must be baked at build time — passed from .env.
+        NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL}
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: ${NEXT_PUBLIC_SUPABASE_ANON_KEY}
+    env_file: .env
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+
+  worker:
+    build:
+      context: ./scraper
+    env_file: .env
+    restart: unless-stopped

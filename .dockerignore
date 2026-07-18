@@ -1,0 +1,12 @@
+# Root build context is used only by Dockerfile.migrate (needs migrations +
+# schema + scripts). Keep it tiny — exclude the app/worker sources and junk.
+app
+scraper
+.git
+node_modules
+**/node_modules
+*.csv
+*.pdf
+*.log
+outreach
+templates
